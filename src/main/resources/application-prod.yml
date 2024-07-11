@@ -1,0 +1,35 @@
+server:
+  port: 5000
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+#spring:
+#  datasource:
+#    url: jdbc:mariadb://${rds.hostname}:${rds.port}/${rds.db.name} # 환경변수(권장)을 통해 DB정보를 넣는다.
+#    driver-class-name: org.mariadb.jdbc.Driver # DB 정보를 넣는다.
+#    username: ${rds.username}
+#    password: ${rds.username}
+#  jpa:
+#    open-in-view: false
+#    hibernate:
+#      ddl-auto: none
+#    properties:
+#      hibernate:
+#        default_batch_fetch_size: 100
+
+logging:
+  level:
+    '[com.file.server]': INFO
+
+# 공통 변수
+common:
+  config:
+    run-system-os: LINUX # LINUX, WINDOWS
+    download:
+      windows-path: D:\file_server
+      linux-path: /file_server
+    security:
+      retry-count: 5
+      safe-time : 10 # 초 단위
